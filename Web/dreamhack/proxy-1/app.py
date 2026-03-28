@@ -41,7 +41,7 @@ def login():
 
 @app.route('/admin', methods=['POST'])
 def admin():
-    if request.remote_addr != '127.0.0.1':
+    if request.remote_add   r != '127.0.0.1':
         return 'Only localhost'
 
     if request.headers.get('User-Agent') != 'Admin Browser':
@@ -51,7 +51,7 @@ def admin():
         return 'Only Admin'
 
     if request.cookies.get('admin') != 'true':
-        return 'Admin Cookie'
+        return 'Admin Cookie'   
 
     if request.form.get('userid') != 'admin':
         return 'Admin id'
